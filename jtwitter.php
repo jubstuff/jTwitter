@@ -2,19 +2,13 @@
 /**
  * Plugin Name: JTwitter
  * Plugin URI:
- * Description: A simple shortcode showing tweets. Uses transient API to cache the result
+ * Description: A simple shortcode showing tweets.It uses transient API to cache the result
  * Version: 0.1
  * Author: Giustino Borzacchiello
  * Author URI: http://giustino.borzacchiello.it
  *
  */
 add_shortcode('twitter', function ($atts, $content) {
-    if (!isset($atts['username'])) {
-        $atts['username'] = 'jubstuff';
-    }
-    if (empty($content)) {
-        $content = 'Follow me on Twitter!';
-    }
     /**
      * @var $username string Twitter username
      * @var $show_tweets bool Show or not last tweets?
